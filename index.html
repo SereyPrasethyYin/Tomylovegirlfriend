@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sok Kanika ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fff0f5;
+    color: #a83262;
+    overflow-x: hidden;
+}
+
+/* BUTTONS */
+
+button {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #e75480;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 5px 15px #e7548030;
+}
+
+button:hover {
+    background: #c93667;
+    transform: translateY(-3px);
+}
+
+/* PAGES */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 20px 100px;
+    text-align: center;
+    animation: fade .6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: float 7s linear forwards;
+    z-index: 20;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+nav button {
+    background: white;
+    color: #d6336c;
+    border: 1px solid #ffc1d6;
+    padding: 10px 18px;
+}
+
+nav button.selected {
+    background: #e75480;
+    color: white;
+}
+
+/* PAGE 1 */
+
+#page1 {
+    background: linear-gradient(
+        135deg,
+        #ffd1df,
+        #fff0f5,
+        #ffc0d5
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page1:not(.active) {
+    display: none;
+}
+
+.hero-icon {
+    font-size: 85px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+h1 {
+    color: #d6336c;
+    font-size: clamp(35px, 7vw, 65px);
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+.hero-text {
+    max-width: 550px;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.small-text {
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+/* PAGE 2 */
+
+#page2 {
+    background: #fff0f5;
+}
+
+.section-title {
+    font-size: 38px;
+    margin: 25px 0 15px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px #e7548020;
+}
+
+.letter {
+    display: none;
+    text-align: left;
+    line-height: 2;
+    margin-top: 25px;
+    animation: fade .6s;
+}
+
+.letter.show {
+    display: block;
+}
+
+.letter h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e75480;
+}
+
+.letter p {
+    margin-bottom: 15px;
+}
+
+/* REASONS */
+
+.reasons {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px, 1fr)
+    );
+    gap: 18px;
+}
+
+.reason {
+    background: white;
+    border-radius: 18px;
+    padding: 25px 18px;
+    box-shadow: 0 5px 20px #e7548018;
+    transition: .3s;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+.reason span {
+    font-size: 35px;
+}
+
+.reason h3 {
+    color: #d6336c;
+    margin: 12px 0;
+}
+
+/* PAGE 3 */
+
+#page3 {
+    background: linear-gradient(
+        135deg,
+        #ffe4ed,
+        #ffc0d5
+    );
+}
+
+.gift {
+    font-size: 85px;
+    margin: 30px 0;
+}
+
+.surprise-box {
+    max-width: 600px;
+    min-height: 160px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 22px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    line-height: 1.8;
+    box-shadow: 0 8px 30px #e7548020;
+    transition: opacity .3s;
+}
+
+.final-message {
+    max-width: 650px;
+    margin: 45px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    line-height: 2;
+    box-shadow: 0 8px 30px #e7548020;
+}
+
+footer {
+    margin-top: 50px;
+    color: #bd4777;
+}
+
+/* MUSIC BUTTON */
+
+.music {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 30;
+    padding: 12px 18px;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav button {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .surprise-box {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- PAGE 1: WELCOME -->
+<!-- ================================= -->
+
+<section class="page active" id="page1">
+
+    <div class="hero-icon">💗</div>
+
+    <p class="small-text">
+        A LITTLE SURPRISE FOR YOU
+    </p>
+
+    <h1>
+        Too My Sweetlove Girlfriend, Oun Kanika! ❤️
+    </h1>
+
+    <p class="hero-text">
+        I made something special just for you,
+        Oun Kanika.
+
+        It's not expensive, it's not perfect,
+        but every little detail comes from my heart.
+
+        I hope this little surprise makes you smile.
+    </p>
+
+    <button onclick="goToPage(2)">
+        Start Our Little Story 💌
+    </button>
+
+    <p style="margin-top:35px;">
+        Made with love, just for you ❤️
+    </p>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- PAGE 2: LOVE LETTER -->
+<!-- ================================= -->
+
+<section class="page" id="page2">
+
+    <nav>
+
+        <button onclick="goToPage(1)">
+            Home
+        </button>
+
+        <button class="selected">
+            Love Letter
+        </button>
+
+        <button onclick="goToPage(3)">
+            Surprise
+        </button>
+
+    </nav>
+
+    <h1 class="section-title">
+        A Letter For You 💌
+    </h1>
+
+    <p class="subtitle">
+        Dear Oun Kanika, there are some words
+        I want you to know.
+    </p>
+
+    <div class="card">
+
+        <div style="font-size:55px;">
+            💌
+        </div>
+
+        <h2 style="margin:15px;">
+            To My Favorite Person
+        </h2>
+
+        <button onclick="toggleLetter()" id="letterButton">
+            Open My Letter ❤️
+        </button>
+
+        <div class="letter" id="letter">
+
+            <h2>
+                My Dearest Oun Kanika, 💗
+            </h2>
+
+            <p>
+                Sometimes I don't know how to express
+                how much you mean to me.
+
+                But I hope you can feel it through
+                these little words.
+            </p>
+
+            <p>
+                You make my ordinary days feel special.
+                Your smile brings happiness to my heart,
+                and your presence makes everything
+                a little more beautiful.
+            </p>
+
+            <p>
+                I don't need a perfect love story.
+
+                I just want something real with you.
+
+                I want to laugh with you, grow with you,
+                and create beautiful memories together.
+            </p>
+
+            <p>
+                Even on difficult days, I hope you
+                always remember how special you are.
+
+                You deserve happiness, kindness,
+                and all the beautiful things in life.
+            </p>
+
+            <p>
+                Thank you for being in my life,
+                Sok Kanika.
+
+                I hope I can give you many reasons
+                to smile every day.
+            </p>
+
+            <h2>
+                I LOVE YOU SO MUCH! ❤️
+            </h2>
+
+            <p style="text-align:right;">
+                Forever yours,<br>
+                Your Boyfriend 💗
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REASONS -->
+
+    <h2 class="section-title">
+        10 Reasons Why I Love You 🌷
+    </h2>
+
+    <p>
+        Sok Kanika, let me tell you
+        why you're so special.
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <span>😊</span>
+            <h3>Your Smile</h3>
+            <p>
+                Your smile makes my day brighter.
+                I hope I can always make you smile.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>💗</span>
+            <h3>Your Heart</h3>
+            <p>
+                You have a beautiful heart
+                that I truly admire.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🌸</span>
+            <h3>Your Personality</h3>
+            <p>
+                I love everything that makes
+                you who you are.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🥰</span>
+            <h3>Your Laugh</h3>
+            <p>
+                Your laughter is one of
+                my favorite sounds.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>✨</span>
+            <h3>Your Beauty</h3>
+            <p>
+                You are beautiful in so
+                many different ways.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🫶</span>
+            <h3>Your Kindness</h3>
+            <p>
+                You make the people around
+                you feel special.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>💌</span>
+            <h3>Our Conversations</h3>
+            <p>
+                I could talk with you
+                for hours.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🌍</span>
+            <h3>Your Presence</h3>
+            <p>
+                Life feels brighter
+                when you're around.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🦋</span>
+            <h3>Your Little Habits</h3>
+            <p>
+                Even the smallest things
+                about you make me happy.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>❤️</span>
+            <h3>Simply You</h3>
+            <p>
+                Because nobody can ever
+                replace you, Sok Kanika.
+            </p>
+        </div>
+
+    </div>
+
+    <button onclick="goToPage(3)">
+        Continue to Your Surprise 🎁
+    </button>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- PAGE 3: SURPRISE -->
+<!-- ================================= -->
+
+<section class="page" id="page3">
+
+    <nav>
+
+        <button onclick="goToPage(1)">
+            Home
+        </button>
+
+        <button onclick="goToPage(2)">
+            Love Letter
+        </button>
+
+        <button class="selected">
+            Surprise
+        </button>
+
+    </nav>
+
+    <h1 class="section-title">
+        A Little Surprise 🎁
+    </h1>
+
+    <p>
+        Oun Kanika, whenever you need a smile,
+        come here and open a little surprise.
+    </p>
+
+    <div class="gift">
+        🎀🎁💗
+    </div>
+
+    <div class="surprise-box" id="message">
+        Your special surprise is waiting for you,
+        Oun Kanika. ❤️
+    </div>
+
+    <button onclick="showSurprise()">
+        Make Me Smile 💕
+    </button>
+
+
+    <!-- FINAL MESSAGE -->
+
+    <div class="final-message">
+
+        <h2 style="color:#e75480;">
+            One Last Thing... ❤️
+        </h2>
+
+        <h3 style="margin:20px 0;">
+            My Beautiful Oun Kanika 🌷
+        </h3>
+
+        <p>
+            If I could choose one person
+            to share more beautiful moments with,
+            I would choose you again and again.
+        </p>
+
+        <p>
+            Thank you for being part of my life.
+
+            Thank you for making my days
+            more meaningful.
+
+            Keep smiling, my love.
+        </p>
+
+        <h1 style="font-size:38px;margin-top:25px;">
+            I LOVE YOU! 💗
+        </h1>
+
+        <p>
+            You're my favorite person. 🌷
+        </p>
+
+        <p style="margin-top:25px;">
+            Always remember this, Oun Kanika:
+            You are special. ❤️
+        </p>
+
+    </div>
+
+    <button onclick="goToPage(1)">
+        Read Our Story Again 💌
+    </button>
+
+    <footer>
+
+        Made with endless love ❤️
+
+        <br>
+
+        For Sok Kanika 🌷
+
+        <br>
+
+        © 2026 | A Little Website Just For You
+
+    </footer>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- BACKGROUND MUSIC -->
+<!-- ================================= -->
+
+<audio id="music" loop>
+    <source src="love-song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Music
+</button>
+
+
+<script>
+
+// PAGE NAVIGATION
+
+function goToPage(number) {
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number)
+        .classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+// LOVE LETTER
+
+function toggleLetter() {
+
+    const letter = document.getElementById("letter");
+
+    const button = document.getElementById("letterButton");
+
+    letter.classList.toggle("show");
+
+    button.innerHTML = letter.classList.contains("show")
+        ? "Close My Letter 💌"
+        : "Open My Letter ❤️";
+
+}
+
+
+// SURPRISE MESSAGES
+
+const messages = [
+
+    "Oun Kanika, you are my favorite notification. ❤️",
+
+    "I hope your beautiful smile never disappears. 😊",
+
+    "If happiness had a name, it would be yours. 💗",
+
+    "You make my ordinary days extraordinary. 🌷",
+
+    "I am so lucky to have someone like you. 🥰",
+
+    "No matter how busy life gets, you are always special to me. 💌",
+
+    "You deserve all the happiness in this world. ✨",
+
+    "Sending you a million virtual hugs! 🫶",
+
+    "You are my favorite person, today and always. ❤️",
+
+    "Never forget how special you are, Sok Kanika. 💕",
+
+    "I would choose you in every lifetime. 🦋",
+
+    "Your happiness will always matter to me. 🌸",
+
+    "You are one of the most beautiful parts of my life. 💗",
+
+    "I hope today gives you a thousand reasons to smile. 🌹",
+
+    "Sok Kanika, you are truly one of a kind. ❤️"
+
+];
+
+
+function showSurprise() {
+
+    const message = document.getElementById("message");
+
+    const random = Math.floor(
+        Math.random() * messages.length
+    );
+
+    message.style.opacity = 0;
+
+    setTimeout(() => {
+
+        message.innerHTML = messages[random];
+
+        message.style.opacity = 1;
+
+    }, 250);
+
+    createHearts();
+
+}
+
+
+// FLOATING HEARTS
+
+function createHearts() {
+
+    for (let i = 0; i < 12; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = [
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "🌸"
+        ][Math.floor(Math.random() * 5)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+
+    }
+
+}
+
+
+// AUTOMATIC FLOATING HEARTS
+
+setInterval(createHearts, 1800);
+
+
+// BACKGROUND MUSIC
+
+const music = document.getElementById("music");
+
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play().then(() => {
+
+            musicBtn.innerHTML = "⏸ Pause Music";
+
+        }).catch(() => {
+
+            alert(
+                "Please add love-song.mp3 to your website folder."
+            );
+
+        });
+
+    } else {
+
+        music.pause();
+
+        musicBtn.innerHTML = "🎵 Play Music";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
